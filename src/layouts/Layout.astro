@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 }
-
+import Navbar from '../components/Navbar.astro';
 const { title } = Astro.props;
 ---
 
@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<Navbar />
 	</head>
 	<body>
 		<slot />
@@ -34,8 +35,9 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background: rgb(131,58,180);
+		background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
 	}
 	code {
 		font-family:
